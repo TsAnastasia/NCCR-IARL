@@ -1,21 +1,14 @@
-import Image from "./assets/images/react.png";
-import Home from "./assets/images/home.svg";
-import ClickCounter from "./components/clickCounter/ClickCounter";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import AppRouter from "./router/AppRouter";
 
 const App = () => {
   return (
-    <main>
-      <h1>
-        React Typescript SCSS Webpack Starter Template - {process.env.NODE_ENV}
-      </h1>
-
-      <p>{process.env.REACT_APP_BASE_URL}</p>
-
-      <img src={Image} alt="React logo" />
-      <img src={Home} alt="React logo" />
-
-      <ClickCounter />
-    </main>
+    <div className="app">
+      <Header />
+      <AppRouter />
+      <Footer />
+    </div>
   );
 };
 
