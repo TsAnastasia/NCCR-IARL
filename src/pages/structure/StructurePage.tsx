@@ -1,9 +1,14 @@
+import PageTitle from "../../components/pageTitle/PageTitle";
+import StructureScheme from "./scheme/StructureScheme";
 import scss from "./structurePage.module.scss";
 
 const StructurePage = () => {
   return (
     <main className={scss.root}>
-      <h1>Project Structure</h1>
+      <PageTitle name="Project's structure" />
+
+      <StructureScheme />
+      <section>file/folder info</section>
     </main>
   );
 };
