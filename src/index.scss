@@ -1,22 +1,3 @@
-.app {
-  margin: 0 auto;
-  width: 100%;
-  min-width: min-content;
-  max-width: 1280px;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: stretch;
-
-  box-shadow: 0 0 40px 4px #c4c4c4c4;
-
-  main {
-    flex: 1;
-  }
-}
-
 body {
   margin: 0;
 }

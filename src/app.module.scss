@@ -1,0 +1,24 @@
+.app {
+  margin: 0 auto;
+  padding: 0 48px;
+  width: 100%;
+  min-width: min-content;
+  max-width: 1280px;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+
+  box-shadow: 0 0 40px 4px #c4c4c4c4;
+
+  &.structure {
+    background: url("./assets/images/bg-structure.png") center/ 400px repeat;
+  }
+
+  main {
+    flex: 1;
+  }
+}
