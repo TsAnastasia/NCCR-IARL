@@ -1,11 +1,11 @@
 import { projectStructure } from "../../../assets/data/structure";
 import StructureSchemeItem from "./item/StructureSchemeItem";
-import scss from "./structureSheme.module.scss";
+import scss from "./structureScheme.module.scss";
 
 const StructureScheme = () => {
   return (
     <section className={scss.root}>
-      <StructureSchemeItem {...projectStructure} />
+      <StructureSchemeItem item={projectStructure} />
     </section>
   );
 };

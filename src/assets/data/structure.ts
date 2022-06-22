@@ -1,6 +1,7 @@
 import { IStructureItem } from "../types/structure";
 
 export const projectStructure: IStructureItem = {
+  id: 1,
   name: "project",
   type: "folder",
   status: "fixed",
@@ -8,25 +9,35 @@ export const projectStructure: IStructureItem = {
   opened: true,
   children: [
     {
+      id: 4,
       name: ".env.development",
       type: "file",
       status: "optional",
       description: "",
     },
     {
+      id: 5,
       name: ".env.production",
       type: "file",
       status: "optional",
       description: "",
     },
     {
+      id: 3,
       name: "public",
       type: "folder",
       status: "fixed",
       description: "",
       children: [
-        { name: "index.html", type: "file", status: "fixed", description: "" },
         {
+          id: 31,
+          name: "index.html",
+          type: "file",
+          status: "fixed",
+          description: "",
+        },
+        {
+          id: 32,
           name: "favicon.ico",
           type: "file",
           status: "optional",
@@ -35,20 +46,29 @@ export const projectStructure: IStructureItem = {
       ],
     },
     {
+      id: 2,
       name: "src",
       type: "folder",
       status: "fixed",
       description: "",
       opened: true,
       children: [
-        { name: "index.ts", type: "file", status: "fixed", description: "" },
         {
+          id: 21,
+          name: "index.ts",
+          type: "file",
+          status: "fixed",
+          description: "",
+        },
+        {
+          id: 22,
           name: "App.ts",
           type: "file",
           status: "fixed",
           description: "",
         },
         {
+          id: 23,
           name: "companents",
           type: "folder",
           status: "fixed",
@@ -56,6 +76,7 @@ export const projectStructure: IStructureItem = {
           children: [],
         },
         {
+          id: 24,
           name: "pages",
           type: "folder",
           status: "fixed",
@@ -63,6 +84,7 @@ export const projectStructure: IStructureItem = {
           children: [],
         },
         {
+          id: 25,
           name: "router",
           type: "folder",
           status: "fixed",
@@ -70,12 +92,14 @@ export const projectStructure: IStructureItem = {
           opened: true,
           children: [
             {
+              id: 251,
               name: "AppRouter.tsx",
               type: "file",
               status: "fixed",
               description: "",
             },
             {
+              id: 252,
               name: "router.tsx",
               type: "file",
               status: "fixed",

@@ -1,5 +1,6 @@
-import { FC, useState } from "react";
+import React, { FC, useContext, useState } from "react";
 import { IStructureItem } from "../../../../assets/types/structure";
+import { SelectedStructureItemContext } from "../../../../utils/contexts";
 import scss from "./structureSchemeItem.module.scss";
 
 const sortItems = (current: IStructureItem, next: IStructureItem) =>
@@ -11,40 +12,64 @@ const sortItems = (current: IStructureItem, next: IStructureItem) =>
     ? 1
     : -1;
 
-const StructureSchemeItem: FC<IStructureItem> = ({
-  name,
-  children,
-  type,
-  opened,
-}) => {
-  const [open, setOpen] = useState(opened);
+const StructureSchemeItem: FC<{
+  item: IStructureItem;
+  level?: number;
+}> = ({ item, level = 0 }) => {
+  const [open, setOpen] = useState(item.opened);
+  const { selectedItem, selectItem } = useContext(SelectedStructureItemContext);
 
-  const toggleOpenHandler = () => setOpen((state) => !state);
+  const toggleOpenHandler = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+    setOpen((state) => !state);
+  };
+
+  const selectHadler = () => selectItem(item);
 
   return (
     <div className={scss.root}>
-      <div className={scss.head}>
-        {type === "folder" && (
+      <div
+        className={`${scss.head} ${
+          selectedItem?.id === item.id && scss.active
+        } ${
+          item.status === "optional"
+            ? scss.optional
+            : item.status === "pattern"
+            ? scss.pattern
+            : ""
+        }`}
+        style={{ paddingLeft: `${10 + level * 30}px` }}
+        onClick={selectHadler}
+      >
+        {item.type === "file" ? (
+          <svg viewBox="0 0 16 20" className={scss.icon}>
+            <path d="M16 18.012V6l-6-6H2c-.941 0-2 1.114-2 2.108v15.904C0 19.006.941 20 1.882 20h12.236c.94 0 1.882-.994 1.882-1.988ZM2 3c0-.497.53-1 1-1h6v5h5v10c0 .497-.53 1.012-1 1.012H3c-.47 0-1-.515-1-1.012V3Z" />
+          </svg>
+        ) : (
           <button
             type="button"
             onClick={toggleOpenHandler}
-            className={scss.button}
-          />
+            className={scss.open}
+          >
+            <svg viewBox="0 0 20 16" className={scss.icon}>
+              <path d="M20 14V4c0-1-1-2-2-2h-8L8 0H2C.824 0 0 .891 0 1.687V14c0 1 1 2 2 2h16c1 0 2-1 2-2ZM2 4h15c.5 0 1 .5 1 1v8c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1V4Z" />
+              <path d="M6 8v2h8V8H6Z" />
+              <path d="M9 5v8h2V5H9Z" opacity={open ? 0 : 1} />
+            </svg>
+          </button>
         )}
-        <svg
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 17 20"
-          className={scss.icon}
-        >
-          <path d="M10.75 0h-8C1.65 0 .76.9.76 2L.75 18c0 1.1.89 2 1.99 2h12.01c1.1 0 2-.9 2-2V6l-6-6Zm4 18h-12V2h7v5h5v11Z" />
-        </svg>
-        <p className={scss.name}>{name}</p>
+        <p className={scss.name}>{item.name}</p>
       </div>
-      {open && children && (
+      {open && item.children && (
         <div className={scss.children}>
-          {children.sort(sortItems).map((item) => (
-            <StructureSchemeItem key={item.name} {...item} />
+          {item.children.sort(sortItems).map((node) => (
+            <StructureSchemeItem
+              key={node.name}
+              item={node}
+              level={level + 1}
+            />
           ))}
         </div>
       )}
