@@ -1,7 +1,8 @@
 import { useCallback, useState } from "react";
 import { IStructureItem } from "../../assets/types/structure";
 import PageTitle from "../../components/pageTitle/PageTitle";
-import { SelectedStructureItemContext } from "../../utils/contexts";
+import { StructurePageContetxt } from "../../utils/contexts";
+import StructureInfo from "./info/StructureInfo";
 import StructureScheme from "./scheme/StructureScheme";
 import scss from "./structurePage.module.scss";
 
@@ -14,14 +15,14 @@ const StructurePage = () => {
   );
 
   return (
-    <SelectedStructureItemContext.Provider value={{ selectedItem, selectItem }}>
+    <StructurePageContetxt.Provider value={{ selectedItem, selectItem }}>
       <main className={scss.root}>
-        <PageTitle name="Project's structure" />
+        <PageTitle name="Структура проекта" className={scss.title} />
 
         <StructureScheme />
-        <section>file/folder info {selectedItem?.name}</section>
+        <StructureInfo />
       </main>
-    </SelectedStructureItemContext.Provider>
+    </StructurePageContetxt.Provider>
   );
 };
 

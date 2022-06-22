@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { IStructureItem } from "../assets/types/structure";
 
-export const SelectedStructureItemContext = createContext<{
+export const StructurePageContetxt = createContext<{
   selectedItem: null | IStructureItem;
   selectItem: (item: IStructureItem | null) => void;
 }>({

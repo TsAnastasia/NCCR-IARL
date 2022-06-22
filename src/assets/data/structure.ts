@@ -5,7 +5,7 @@ export const projectStructure: IStructureItem = {
   name: "project",
   type: "folder",
   status: "fixed",
-  description: "",
+  description: "Корневая папка проекта.",
   opened: true,
   children: [
     {
