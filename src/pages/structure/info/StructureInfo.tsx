@@ -28,7 +28,14 @@ const StructureInfo = () => {
               {selectedItem.status === "fixed" ? "обязательно" : "опционально"}
             </span>
           </p>
-          <p className={scss.text}>{selectedItem.description}</p>
+          <div>
+            {selectedItem.description.split("\n").map((text, index) => (
+              <p key={index} className={scss.text}>
+                {text}
+              </p>
+            ))}
+          </div>
+
           <button type="button" onClick={closeHandler} className={scss.close} />
         </>
       ) : (

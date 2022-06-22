@@ -23,25 +23,34 @@ export const projectStructure: IStructureItem = {
       description: "",
     },
     {
+      id: 6,
+      name: "Readme.md",
+      type: "file",
+      status: "fixed",
+      description: "",
+    },
+    {
       id: 3,
       name: "public",
       type: "folder",
       status: "fixed",
-      description: "",
+      description: "Папка с файлами для настройки шаблона страниц проекта.",
       children: [
         {
           id: 31,
           name: "index.html",
           type: "file",
           status: "fixed",
-          description: "",
+          description:
+            "Начальный шаблон страницы проекта.\n Содержит информацию о заголовке (title), иконке (favicon) документа, отображаемых ввеху вкладки сайта. \n При необходимости в нем можно указать мета-данные проекта: имя, описание, автор и др.\n Также в нем можно подключить/импортировать необходимые шрифты, стили, изображения и библиотеки. Но лучше это делать через JavaScript.",
         },
         {
           id: 32,
           name: "favicon.ico",
           type: "file",
           status: "optional",
-          description: "",
+          description:
+            "Иконка, отображаемыая в названии вкладки сайта и подключаемая в index.html.",
         },
       ],
     },
@@ -50,7 +59,8 @@ export const projectStructure: IStructureItem = {
       name: "src",
       type: "folder",
       status: "fixed",
-      description: "",
+      description:
+        "Папка с файлами, обрабатываемыми webpack. Внутри можно создавть подкаталоги.",
       opened: true,
       children: [
         {
@@ -58,7 +68,7 @@ export const projectStructure: IStructureItem = {
           name: "index.ts",
           type: "file",
           status: "fixed",
-          description: "",
+          description: "Точка входа JavaScript.",
         },
         {
           id: 22,
