@@ -1,6 +1,11 @@
 declare namespace StructureSchemeItemModuleScssNamespace {
   export interface IStructureSchemeItemModuleScss {
+    button: string;
     children: string;
+    head: string;
+    icon: string;
+    name: string;
+    root: string;
   }
 }
 
