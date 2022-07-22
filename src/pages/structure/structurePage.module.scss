@@ -5,7 +5,7 @@
 
   display: grid;
   gap: 20px;
-  grid-template: "title title" "sheme info"/ 350px 1fr;
+  grid-template: "title title" "sheme info" minmax(300px, calc(100vh - 300px)) / 350px 1fr;
   align-content: flex-start;
   justify-content: stretch;
 

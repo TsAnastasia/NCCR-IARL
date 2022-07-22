@@ -1,9 +1,11 @@
 export interface IStructureItem {
-  id: number;
+  id: string;
   name: string;
   type: "folder" | "file";
-  status: "fixed" | "optional" | "pattern";
   children?: IStructureItem[];
   description: string;
   opened?: boolean;
+  gitIgnore?: boolean;
+  necessary?: boolean;
+  patern?: boolean;
 }

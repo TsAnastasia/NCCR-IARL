@@ -20,13 +20,13 @@ const StructureInfo = () => {
           </p>
           <p className={scss.subtitle}>
             Наличие:
-            <span
+            {/* <span
               className={`${scss.text} ${
                 selectedItem.status === "optional" ? scss.optional : ""
               }`}
             >
               {selectedItem.status === "fixed" ? "обязательно" : "опционально"}
-            </span>
+            </span> */}
           </p>
           <div>
             {selectedItem.description.split("\n").map((text, index) => (

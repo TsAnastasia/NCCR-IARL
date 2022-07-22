@@ -7,4 +7,22 @@
   box-shadow: 2px 2px 5px #c4c4c4;
 
   overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c4c4c4 #f7f8f8;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 2px;
+    border-radius: 99rem;
+    background-color: #f7f8f8;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 99rem;
+    background-color: #c4c4c4;
+  }
 }

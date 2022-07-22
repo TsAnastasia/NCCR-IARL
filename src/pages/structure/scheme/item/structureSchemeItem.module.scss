@@ -5,13 +5,21 @@
 .children {
   margin: 0;
   padding: 0;
+  min-width: min-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 .head {
   padding: 5px;
+  min-width: min-content;
+
   display: flex;
   align-items: center;
-  justify-content: stretch;
+  justify-content: flex-start;
 
   color: #000000;
 
