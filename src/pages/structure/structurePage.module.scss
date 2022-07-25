@@ -1,11 +1,20 @@
 .root {
   padding: 30px 0;
+  min-height: 400px;
+  max-height: calc(100vh - 200px);
 
   background: rgba(257, 257, 257, 0.5);
 
   display: grid;
   gap: 20px;
-  grid-template: "title title" "sheme info" minmax(300px, calc(100vh - 300px)) / 350px 1fr;
+  grid-template:
+    "title title" "sheme about" auto "sheme info" 1fr
+    / 350px 1fr;
   align-content: flex-start;
   justify-content: stretch;
+
+  .title {
+    margin: 0;
+    grid-area: title;
+  }
 }

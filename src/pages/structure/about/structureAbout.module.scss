@@ -1,14 +1,33 @@
 .root {
-  grid-area: title;
+  padding: 10px;
+
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #c4c4c4;
+
+  grid-area: about;
 }
 
-.description {
-  margin: 0;
+.title {
+  margin: 0 0 10px;
 
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+
+  color: #000000;
+}
+
+.text {
+  margin: 6px 0;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
   line-height: 120%;
 
   color: #000000;

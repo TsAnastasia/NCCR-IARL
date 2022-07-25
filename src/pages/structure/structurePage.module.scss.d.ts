@@ -1,6 +1,7 @@
 declare namespace StructurePageModuleScssNamespace {
   export interface IStructurePageModuleScss {
     root: string;
+    title: string;
   }
 }
 

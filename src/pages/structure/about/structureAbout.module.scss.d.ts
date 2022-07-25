@@ -1,7 +1,8 @@
 declare namespace StructureAboutModuleScssNamespace {
   export interface IStructureAboutModuleScss {
-    description: string;
     root: string;
+    text: string;
+    title: string;
   }
 }
 
