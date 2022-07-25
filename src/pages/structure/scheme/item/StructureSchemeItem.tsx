@@ -1,16 +1,8 @@
 import React, { FC, useContext, useState } from "react";
 import { StructurePageContext } from "../../../../assets/contexts/StructurePageContext";
 import { IStructureItem } from "../../../../assets/types/structure";
+import { sortStructureItems } from "../../../../assets/utils/sortStructureItems";
 import scss from "./structureSchemeItem.module.scss";
-
-const sortItems = (current: IStructureItem, next: IStructureItem) =>
-  current.type === "folder" && next.type === "file"
-    ? -1
-    : current.type === "file" && next.type === "folder"
-    ? 1
-    : current.name.toLowerCase() > next.name.toLowerCase()
-    ? 1
-    : -1;
 
 const StructureSchemeItem: FC<{
   item: IStructureItem;
@@ -62,7 +54,7 @@ const StructureSchemeItem: FC<{
       </div>
       {open && item.children && (
         <div className={scss.children}>
-          {item.children.sort(sortItems).map((node) => (
+          {sortStructureItems(item.children).map((node) => (
             <StructureSchemeItem
               key={node.name}
               item={node}
