@@ -1,6 +1,6 @@
 import React, { FC, useContext, useState } from "react";
+import { StructurePageContext } from "../../../../assets/contexts/StructurePageContext";
 import { IStructureItem } from "../../../../assets/types/structure";
-import { StructurePageContetxt } from "../../../../utils/contexts";
 import scss from "./structureSchemeItem.module.scss";
 
 const sortItems = (current: IStructureItem, next: IStructureItem) =>
@@ -17,7 +17,7 @@ const StructureSchemeItem: FC<{
   level?: number;
 }> = ({ item, level = 0 }) => {
   const [open, setOpen] = useState(item.opened);
-  const { selectedItem, selectItem } = useContext(StructurePageContetxt);
+  const { selectedItem, selectItem } = useContext(StructurePageContext);
 
   const toggleOpenHandler = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>

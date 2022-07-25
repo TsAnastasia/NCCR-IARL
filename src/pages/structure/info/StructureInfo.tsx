@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { StructurePageContetxt } from "../../../utils/contexts";
+import { StructurePageContext } from "../../../assets/contexts/StructurePageContext";
 import scss from "./structureInfo.module.scss";
 
 const StructureInfo = () => {
-  const { selectedItem, selectItem } = useContext(StructurePageContetxt);
+  const { selectedItem, selectItem } = useContext(StructurePageContext);
 
   const closeHandler = () => selectItem(null);
 
