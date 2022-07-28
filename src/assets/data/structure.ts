@@ -11,123 +11,136 @@ export const projectStructure: IStructureItem = {
       id: "dde0e90a-18bf-4a70-a447-a9a2b205f1b2",
       name: ".env.development",
       type: "file",
-      description: "",
+      description:
+        "Переменные окружения для `development` (для разработки) сборки.",
     },
     {
       id: "8c89428b-d844-4222-9dde-7edf87ba4fda",
       name: ".env.production",
       type: "file",
-      description: "",
+      description: "Переменные окружения для `production` сборки.",
     },
     {
       id: "dcd4682c-2e48-4af5-b2bc-78bc6e2c66dd",
       name: "Readme.md",
       type: "file",
-      description: "",
+      description:
+        "Описание проекта, которое может содержать следующую информацию:\n – ссылка на макет;\n – ссылка на api;\n – ссылка на веб-сайт;\n – используемые технологии;\n – команда разработки;\n – доступные скрипты;\n – инструкции по сборке и запуску и т.д.",
     },
     {
       id: "ca32e833-1b18-4fec-96f9-c7da4949b0bd",
       name: ".babelrc",
       type: "file",
-      description: "",
+      description:
+        "Конфигурация babel – транспилятора, преобразовывающего JSX и TypeScript в JS.",
     },
     {
       id: "f350f21d-a706-4db7-a126-36633249b498",
       name: ".eslintrc.json",
       type: "file",
-      description: "",
+      description:
+        "Настройки ESLint – утилита, анализирующая написанный код.\n В используемом шаблоне настроена автоматическая проверка кода перед созданием коммита.",
     },
     {
       id: "560d725c-4ff3-4f2b-8eda-bb525a584cfb",
       name: ".gitignore",
       type: "file",
-      description: "",
+      description: "Список файлов и папок проекта, игнорируемых Git.",
     },
     {
       id: "006b855b-77b6-46b7-8704-4e8af844b1b3",
       name: ".prettierrc.json",
       type: "file",
-      description: "",
+      description:
+        "Настройки Prettier – средство форматирования кода. \n В используемом шаблоне настроено автоматическое форматирование кода перед созданием коммита",
     },
     {
       id: "7c30d504-f4f1-4e75-aa77-a3112a5ca269",
       name: "base.dockerfile",
       type: "file",
-      description: "",
+      description: "Инструкции для создания образа контейнера.",
     },
     {
       id: "34207959-fbea-4033-b5ae-f1f6859f9816",
       name: "Dockerfile",
       type: "file",
-      description: "",
+      description: "Инструкции для создания образа контейнера.",
     },
     {
       id: "c05a156f-722b-4dea-8fa1-eab726732092",
       name: "package-lock.json",
       type: "file",
-      description: "",
+      description:
+        "Список зависимостей вашего приложения и зависимостей всех его зависимостей.\n Предназначен для блокировки зависимостей от определенного номера версий.",
     },
     {
       id: "7d325332-746a-42ac-817c-4a1113c9a08e",
       name: "package.json",
       type: "file",
-      description: "",
+      description:
+        "`Файл-манифест` проекта, содержащий:\n – список зависимостей верхнего уровня, необходимых приложению;\n – настройки различных вспомогательных инструментов;\n – скрипты проекта и т.д.",
     },
     {
       id: "dc82220a-0960-471e-a9bf-9602e98ce630",
       name: "tsconfig.json",
       type: "file",
-      description: "",
+      description: "Настройки TypeScript для проекта.",
     },
     {
       id: "bb081c52-b91c-4f3f-9e2c-42fdb5b93841",
       name: "yarn.lock",
       type: "file",
-      description: "",
+      description:
+        "Список точных версий всех пакетов, установленных yarn в каталог `node_modules`.",
     },
     {
       id: "85912486-6fd0-409f-8f0b-dc8f769474be",
       name: "node_modules",
       type: "folder",
-      description: "",
+      description:
+        "Все внешние библиотеки JavaScript, используемые приложением.",
+      gitIgnore: true,
     },
     {
       id: "c70e2c3f-a991-428a-88e7-8cce2787ff92",
       name: "build",
       type: "folder",
       description:
-        "Скомпилированная версия проекта - результат сборки (скрипт `build`).",
+        "Скомпилированная версия проекта – результат сборки (скрипт `build`).\n Минифицированный и оптимизированный код проекта.",
       gitIgnore: true,
     },
     {
       id: "fe8b9194-9864-4791-85b6-3178939dafcb",
       name: "webpack",
       type: "folder",
-      description: "",
+      description:
+        "Настройки `webpack` – системы сборки проекта, генерирующей статические ресурсы из модулей зависимостей проекта.\n Трансформацией ресурсов занимаются загрузчики, которые являются сердцем вебпака.",
       children: [
         {
           id: "5a0e3167-ae23-4cba-9a67-cade32d56bb3",
           name: "webpack.common.js",
           type: "file",
-          description: "",
+          description:
+            "Общие настройки для `production` и `development` сборок.",
         },
         {
           id: "3c653fa2-bcc6-48cd-a4f6-1db7a722d9fc",
           name: "webpack.config.js",
           type: "file",
-          description: "",
+          description: "Основная конфигурация для сборки проекта.",
         },
         {
           id: "0fd1b036-c924-4a7b-af37-15e8dfcd5973",
           name: "webpack.dev.js",
           type: "file",
-          description: "",
+          description: "Настройки `development` (для разработки) сборки.",
         },
         {
           id: "c82be7c2-1151-4637-9eed-5cb3b3d844c9",
           name: "webpack.prod.js",
           type: "file",
-          description: "",
+          description:
+            "Настройки `production` сборки. \n Минифицированный и оптимизированный код проекта сохраняется в папку `build`.",
         },
       ],
     },
@@ -135,13 +148,13 @@ export const projectStructure: IStructureItem = {
       id: "3c7dec53-0f50-4908-9c00-d3cb54c20c51",
       name: "nginx",
       type: "folder",
-      description: "",
+      description: "Настройки nginx.",
       children: [
         {
           id: "76f7d996-b98d-4ae5-9372-60f7124024aa",
           name: "nginx.conf",
           type: "file",
-          description: "",
+          description: "Настройки nginx.",
         },
       ],
     },
@@ -149,21 +162,23 @@ export const projectStructure: IStructureItem = {
       id: "f953e389-3c2c-4273-af57-cf407eaaded2",
       name: "public",
       type: "folder",
-      description: "Папка с файлами для настройки шаблона страниц проекта.",
+      description:
+        "Корневые ресурсы проекта: базовая страница html, значок веб-сайта и т.д.",
       children: [
         {
           id: "0190767f-6c52-4331-9e9d-c94e71390b9b",
           name: "index.html",
           type: "file",
           description:
-            "Начальный шаблон страницы проекта.\n При необходимости в нем можно указать мета-данные проекта: имя, описание, автор и др.\n Также в нем можно подключить/импортировать необходимые шрифты, стили, изображения и библиотеки. Но лучше это делать через JavaScript.",
+            "Базовая страница HTML, выступающая в качестве корневой для проекта. \n Основа запуска проекта. \n Именно этот файл считывает сервер и отображает браузер. \n При необходимости в нем можно указать мета-данные проекта: имя, описание, автор и др.\n Также в нем можно подключить/импортировать необходимые шрифты, стили, изображения и библиотеки. Но лучше это делать через JavaScript.",
           necessary: true,
         },
         {
           id: "e2cdde0b-4ad1-4ec1-a1d2-528f73948024",
           name: "favicon.ico",
           type: "file",
-          description: "Иконка, отображаемая в названии вкладки сайта.",
+          description:
+            "Значок веб-сайта, отображаемый во вкладке страницы или в качестве картинки с закладкой, а также в адресной строке некоторых браузеров.",
         },
       ],
     },

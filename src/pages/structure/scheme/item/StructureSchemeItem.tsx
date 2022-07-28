@@ -28,7 +28,11 @@ const StructureSchemeItem: FC<{
   return (
     <div className={scss.root}>
       <div
-        className={cl(scss.head, selectedItem?.id === item.id && scss.active)}
+        className={cl(
+          scss.head,
+          selectedItem?.id === item.id && scss.active,
+          item.gitIgnore && scss.gitIngnore
+        )}
         style={{ paddingLeft: `${10 + level * 20}px` }}
         onClick={selectHadler}
       >

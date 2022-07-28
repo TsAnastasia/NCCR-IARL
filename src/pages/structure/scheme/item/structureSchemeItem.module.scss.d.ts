@@ -2,12 +2,11 @@ declare namespace StructureSchemeItemModuleScssNamespace {
   export interface IStructureSchemeItemModuleScss {
     active: string;
     children: string;
+    gitIngnore: string;
     head: string;
     icon: string;
     name: string;
     open: string;
-    optional: string;
-    pattern: string;
     root: string;
   }
 }
