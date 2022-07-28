@@ -1,3 +1,4 @@
+import { TEMPLATE_LINK } from "../../../assets/utils/constants";
 import scss from "./structureAbout.module.scss";
 
 const StructureAbout = () => {
@@ -5,13 +6,16 @@ const StructureAbout = () => {
     <section className={scss.root}>
       <h2 className={scss.title}>Общие сведения</h2>
       <p className={scss.text}>
-        Данная структура проекта формируется на основе указанного шаблона
-        {/* TODO: add link */}.
+        Данная структура проекта формируется на основе{" "}
+        <a href={TEMPLATE_LINK} target="_blank" rel="noreferrer">
+          нашего шаблона
+        </a>
+        .
       </p>
       <p className={scss.text}>
-        Для стилизации компонентов используются `.module.scss`. Соотвествующие
-        файлы располагаются в той же папке, что и компонент. При этом файлы для
-        типизации `.module.scss.d.ts` создаются автоматически.
+        Для стилизации компонентов применяется `sass`. Соотвествующие файлы
+        `.module.scss` располагаются в той же папке, что и компонент, при этом
+        файлы их типизации `.module.scss.d.ts` создаются автоматически.
       </p>
       <p className={scss.text}>
         В вашем проекте часть папок/файлов может отсутвовать, если в них нет

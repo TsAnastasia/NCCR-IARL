@@ -1,7 +1,7 @@
 export interface IStructureItem {
   id: string;
   name: string;
-  type: "folder" | "file";
+  type: keyof typeof structureItemTypes;
   children?: IStructureItem[];
   description: string;
   opened?: boolean;
@@ -9,3 +9,8 @@ export interface IStructureItem {
   necessary?: boolean;
   patern?: boolean;
 }
+
+export const structureItemTypes = {
+  folder: "папка",
+  file: "файл",
+};

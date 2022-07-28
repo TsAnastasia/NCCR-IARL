@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { StructurePageContext } from "../../../assets/contexts/StructurePageContext";
+import { structureItemTypes } from "../../../assets/types/structure";
+import { cl } from "../../../assets/utils/classnames";
 import scss from "./structureInfo.module.scss";
 
 const StructureInfo = () => {
@@ -12,29 +14,15 @@ const StructureInfo = () => {
       {selectedItem ? (
         <>
           <h2 className={scss.title}>{selectedItem.name}</h2>
-          <p className={scss.subtitle}>
-            Тип:
-            <span className={scss.text}>
-              {selectedItem.type === "file" ? "файл" : "папка"}
-            </span>
+          <p className={scss.text}>
+            <span className={scss.subtitle}>Тип</span>
+            {structureItemTypes[selectedItem.type]}
           </p>
-          <p className={scss.subtitle}>
-            Наличие:
-            {/* <span
-              className={`${scss.text} ${
-                selectedItem.status === "optional" ? scss.optional : ""
-              }`}
-            >
-              {selectedItem.status === "fixed" ? "обязательно" : "опционально"}
-            </span> */}
+
+          <span className={scss.subtitle}>Описание</span>
+          <p className={cl(scss.text, scss.description)}>
+            {selectedItem.description}
           </p>
-          <div>
-            {selectedItem.description.split("\n").map((text, index) => (
-              <p key={index} className={scss.text}>
-                {text}
-              </p>
-            ))}
-          </div>
 
           <button type="button" onClick={closeHandler} className={scss.close} />
         </>

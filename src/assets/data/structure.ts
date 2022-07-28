@@ -95,7 +95,9 @@ export const projectStructure: IStructureItem = {
       id: "c70e2c3f-a991-428a-88e7-8cce2787ff92",
       name: "build",
       type: "folder",
-      description: "",
+      description:
+        "Скомпилированная версия проекта - результат сборки (скрипт `build`).",
+      gitIgnore: true,
     },
     {
       id: "fe8b9194-9864-4791-85b6-3178939dafcb",

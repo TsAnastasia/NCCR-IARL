@@ -24,8 +24,6 @@
 }
 
 .subtitle {
-  margin: 0 0 10px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -34,17 +32,8 @@
 
   color: #000000;
 
-  .text {
-    margin-left: 2px;
-    font-weight: 300;
-  }
-
-  .optional {
-    color: #0025a7;
-  }
-
-  .pattern {
-    color: #318749;
+  &::after {
+    content: ": ";
   }
 }
 
@@ -59,6 +48,10 @@
   white-space: pre-line;
 
   color: #000000;
+
+  &.description {
+    margin: 0 0 5px 20px;
+  }
 }
 
 .empty {
@@ -66,7 +59,7 @@
 
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 120%;
 

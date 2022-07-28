@@ -1,9 +1,8 @@
 declare namespace StructureInfoModuleScssNamespace {
   export interface IStructureInfoModuleScss {
     close: string;
+    description: string;
     empty: string;
-    optional: string;
-    pattern: string;
     root: string;
     subtitle: string;
     text: string;
