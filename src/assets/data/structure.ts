@@ -1000,7 +1000,8 @@ export const projectStructure: IStructureItem = {
               id: "eea5faa1-54f6-410f-ace6-2c77c7b0a0bc",
               name: "store.ts",
               type: "file",
-              description: "",
+              description:
+                "Настройки глобального хранилища приложения: \n - подключение редюсеров; \n - подключение localStorage или sessionStorage для хранения данных; \n - определение списка редюсеров, данные которых сохраняются в localStorage или sessionStorage; \n - и т.д.",
             },
           ],
         },
