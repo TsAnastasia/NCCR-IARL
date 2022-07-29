@@ -6,7 +6,9 @@ declare namespace StructureSchemeItemModuleScssNamespace {
     head: string;
     icon: string;
     name: string;
+    necessary: string;
     open: string;
+    pattern: string;
     root: string;
   }
 }

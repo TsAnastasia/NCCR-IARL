@@ -31,7 +31,9 @@ const StructureSchemeItem: FC<{
         className={cl(
           scss.head,
           selectedItem?.id === item.id && scss.active,
-          item.gitIgnore && scss.gitIngnore
+          item.gitIgnore && scss.gitIngnore,
+          item.necessary && scss.necessary,
+          item.patern && scss.pattern
         )}
         style={{ paddingLeft: `${10 + level * 20}px` }}
         onClick={selectHadler}
@@ -48,7 +50,7 @@ const StructureSchemeItem: FC<{
           {sortStructureItems(item.children).map((node) => (
             <StructureSchemeItem
               key={node.name}
-              item={node}
+              item={{ ...node, patern: item.patern || node.patern }}
               level={level + 1}
             />
           ))}

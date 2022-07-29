@@ -73,7 +73,15 @@
 
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 120%;
+
+  .necessary & {
+    font-weight: 500;
+  }
+
+  .pattern & {
+    color: green;
+  }
 }
