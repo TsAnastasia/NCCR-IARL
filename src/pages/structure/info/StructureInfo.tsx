@@ -19,11 +19,31 @@ const StructureInfo = () => {
             {structureItemTypes[selectedItem.type]}
           </p>
 
+          {selectedItem.necessary && (
+            <p className={scss.text}>
+              <span className={scss.subtitle}>Наличие</span>
+              обязательно
+            </p>
+          )}
+
+          {selectedItem.patern && (
+            <p className={scss.text}>
+              Данное название файла/папки является примером, в вашем проекте оно
+              может отличаться.
+            </p>
+          )}
+
+          {selectedItem.gitIgnore && (
+            <p className={scss.text}>
+              Данный файла/папка игнорируются `git` и храняться только локально
+              в репозитории.
+            </p>
+          )}
+
           <span className={scss.subtitle}>Описание</span>
           <p className={cl(scss.text, scss.description)}>
             {selectedItem.description}
           </p>
-
           <button type="button" onClick={closeHandler} className={scss.close} />
         </>
       ) : (

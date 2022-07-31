@@ -109,6 +109,7 @@ export const projectStructure: IStructureItem = {
       description:
         "Все внешние библиотеки JavaScript, используемые приложением.",
       gitIgnore: true,
+      necessary: true,
     },
     {
       id: "c70e2c3f-a991-428a-88e7-8cce2787ff92",
@@ -347,14 +348,14 @@ export const projectStructure: IStructureItem = {
               children: [
                 {
                   id: "cfb00bcc-4fd9-4f34-9771-7a41e9e441c2",
-                  name: "form",
+                  name: "example",
                   type: "folder",
                   description: "Код формы приложения.",
                   patern: true,
                   children: [
                     {
                       id: "5c031496-2a7a-436a-babc-c298c835ee24",
-                      name: "Form.tsx",
+                      name: "ExampleForm.tsx",
                       type: "file",
                       description:
                         "Компонент соответствующей формы приложения.",
@@ -368,16 +369,16 @@ export const projectStructure: IStructureItem = {
                     },
                     {
                       id: "7098069b-3d70-4550-a164-7d797d23b931",
-                      name: "form.module.scss",
+                      name: "exampleForm.module.scss",
                       type: "file",
-                      description: "Стилизация для компонента `Form`.",
+                      description: "Стилизация для компонента `ExampleForm`.",
                     },
                     {
                       id: "3fc3cb72-3841-4308-b905-c7c927e65682",
-                      name: "form.module.scss.d.ts",
+                      name: "exampleForm.module.scss.d.ts",
                       type: "file",
                       description:
-                        "Декларации типов для файла стилизации `form.module.scss`.\n Файл создается автоматически.",
+                        "Декларации типов для файла стилизации `exampleForm.module.scss`.\n Файл создается автоматически.",
                     },
                   ],
                 },
@@ -496,6 +497,7 @@ export const projectStructure: IStructureItem = {
                           name: "LabelTextField.tsx",
                           type: "file",
                           description: "Компонент поля ввода с подписью.",
+                          necessary: true,
                         },
                         {
                           id: "8feb8a67-5343-44da-9de1-f35220c00258",
@@ -578,6 +580,7 @@ export const projectStructure: IStructureItem = {
                           type: "file",
                           description:
                             "Общий компонент всплывающего окна приложения.",
+                          necessary: true,
                         },
                         {
                           id: "05c447ff-005d-4e42-9b55-ee3f57098744",
@@ -598,7 +601,7 @@ export const projectStructure: IStructureItem = {
                 },
                 {
                   id: "68acea97-f140-46e9-9a55-5acff0ad34e8",
-                  name: "popup",
+                  name: "example",
                   type: "folder",
                   description: "Код всплывающего окна приложения.",
                   patern: true,
@@ -612,7 +615,7 @@ export const projectStructure: IStructureItem = {
                       children: [
                         {
                           id: "30a6e4ad-bbc0-4f17-8f48-695db2b0d72e",
-                          name: "PopupContent.tsx",
+                          name: "ExampleContent.tsx",
                           type: "file",
                           description:
                             "Компонент содержимого всплывающего окна приложения.",
@@ -620,14 +623,14 @@ export const projectStructure: IStructureItem = {
                         },
                         {
                           id: "33c50954-3362-4748-8560-5ea6569fc0df",
-                          name: "popupContent.module.scss",
+                          name: "exampleContent.module.scss",
                           type: "file",
                           description:
-                            "Стилизация для компонента `PopupContent`.",
+                            "Стилизация для компонента `ExampleContent`.",
                         },
                         {
                           id: "c0ebdff6-ecfc-4059-9a28-b299d56bdaa8",
-                          name: "popupContent.module.scss.d.ts",
+                          name: "exampleContent.module.scss.d.ts",
                           type: "file",
                           description:
                             "Декларации типов для файла стилизации `popupContent.module.scss`.\n Файл создается автоматически.",
@@ -636,7 +639,7 @@ export const projectStructure: IStructureItem = {
                     },
                     {
                       id: "3bc08eaa-bf32-4644-9fd6-0485281dd788",
-                      name: "Popup.tsx",
+                      name: "ExamplePopup.tsx",
                       type: "file",
                       description:
                         "Компонент всплывающего окна приложения, содержащий также компонент, функциональность которого может вызывать это окно.",
@@ -644,16 +647,16 @@ export const projectStructure: IStructureItem = {
                     },
                     {
                       id: "a5c9b5c3-98e5-4a9f-8ecc-7efdb985b1a2",
-                      name: "popup.module.scss",
+                      name: "examplePopup.module.scss",
                       type: "file",
-                      description: "Стилизация для компонента `Popup`.",
+                      description: "Стилизация для компонента `ExamplePopup`.",
                     },
                     {
                       id: "06aae3de-7143-4eb9-a9ef-5383d6aa7f36",
-                      name: "popup.module.scss.d.ts",
+                      name: "examplePopup.module.scss.d.ts",
                       type: "file",
                       description:
-                        "Декларации типов для файла стилизации `popup.module.scss`.\n Файл создается автоматически.",
+                        "Декларации типов для файла стилизации `examplePopup.module.scss`.\n Файл создается автоматически.",
                     },
                   ],
                 },
@@ -665,39 +668,42 @@ export const projectStructure: IStructureItem = {
           id: "3d38edbc-f278-4a54-9f2a-a32c078ecb9e",
           name: "pages",
           type: "folder",
-          description: "",
+          description: "Компоненты отдельных страниц приложения.",
+          necessary: true,
           children: [
             {
               id: "c04a0a89-29cf-480d-b288-4ead18f19a3e",
               name: "home",
               type: "folder",
-              description: "",
+              description: "Код соответствующей страницы приложения.",
               patern: true,
               children: [
                 {
                   id: "4add042c-53bd-48f8-bf40-092a23048d77",
                   name: "about",
                   type: "folder",
-                  description: "",
-                  patern: true,
+                  description:
+                    "Код соответствующего компонента страницы приложения.",
                   children: [
                     {
                       id: "1ebc18dd-ed67-40a9-909a-5e3dcb097504",
                       name: "HomeAbout.tsx",
                       type: "file",
-                      description: "",
+                      description: "Компонент страницы `home` приложения.",
+                      necessary: true,
                     },
                     {
                       id: "d777a508-a9e9-4f1a-bd8c-9968cde06191",
                       name: "homeAbout.module.scss",
                       type: "file",
-                      description: "",
+                      description: "Стилизация для компонента `HomeAbout`.",
                     },
                     {
                       id: "98b79cbb-3c61-412b-91e1-3609a34fa92a",
                       name: "homeAbout.module.scss.d.ts",
                       type: "file",
-                      description: "",
+                      description:
+                        "Декларации типов для файла стилизации `homeAbout.module.scss`.\n Файл создается автоматически.",
                     },
                   ],
                 },
@@ -705,19 +711,21 @@ export const projectStructure: IStructureItem = {
                   id: "0281320b-5afa-4f33-a1eb-b5b6693a3b2d",
                   name: "HomePage.tsx",
                   type: "file",
-                  description: "",
+                  description: "Компонент соответствующей страницы приложения.",
+                  necessary: true,
                 },
                 {
                   id: "aea7677a-a0c0-4462-bb07-a6b2b7641d42",
                   name: "homePage.module.scss",
                   type: "file",
-                  description: "",
+                  description: "Стилизация для компонента `HomePage`.",
                 },
                 {
                   id: "02e90183-d160-46da-9c12-2ef9818723f3",
                   name: "homePage.module.scss.d.ts",
                   type: "file",
-                  description: "",
+                  description:
+                    "Декларации типов для файла стилизации `homePage.module.scss`.\n Файл создается автоматически.",
                 },
               ],
             },
@@ -727,112 +735,41 @@ export const projectStructure: IStructureItem = {
           id: "655fd16e-682b-4ef9-b2f3-b8eea7bf15db",
           name: "assets",
           type: "folder",
-          description: "",
+          description: "Статическая директория.",
           children: [
             {
               id: "77bd821f-1a26-468a-8286-d48f137a14a0",
               name: "images",
               type: "folder",
-              description: "",
-              children: [
-                {
-                  id: "2c62cb3c-76f3-4832-8e47-b0491d39be7b",
-                  name: "logo.svg",
-                  type: "file",
-                  patern: true,
-                  description: "",
-                },
-                {
-                  id: "0ce1759d-e0bb-4314-8565-22ee8b62d70a",
-                  name: "background.png",
-                  type: "file",
-                  patern: true,
-                  description: "",
-                },
-                {
-                  id: "2ddc26d9-508f-4d45-93a7-b5cea98b4cd4",
-                  name: "image.jpg",
-                  type: "file",
-                  patern: true,
-                  description: "",
-                },
-              ],
+              description:
+                "Изображения, используемые во фронтенде: логотипы, иконки, фоны и т.д.\n Файлы в формате `.jpg`, `.png`, `.svg`, `.gif` и т.д.",
             },
             {
               id: "2152a828-17e8-4636-8888-c7be9e5f52aa",
               name: "data",
               type: "folder",
-              description: "",
-              children: [
-                {
-                  id: "d3889204-0838-41dd-b2cb-56dd1a51ad26",
-                  name: "data.json",
-                  type: "file",
-                  description: "",
-                },
-                {
-                  id: "38d2dcfd-1084-445d-8f08-eea0f1335819",
-                  name: "data.ts",
-                  type: "file",
-                  patern: true,
-                  description: "",
-                },
-              ],
+              description:
+                "Статичные данные, применяемые во фронтенде:\n – списки: команда разработчиков, партнеры, этапы чего-то (название, описание, изображение...) и т.д.;\n – тексты: описание проекта, правила пользования сервиса, политика конфиденциальности и т.д.\n Данные можно сохранить в формате `json` или `ts(x)`.",
             },
             {
               id: "0cd399be-1891-48e9-bd15-eb7b89652e20",
               name: "dataForAPI",
               type: "folder",
-              description: "",
-              children: [
-                {
-                  id: "70084e99-b8b4-46d6-9cde-7350efd16fcd",
-                  name: "data.json",
-                  type: "file",
-                  description: "",
-                },
-                {
-                  id: "59424e92-996e-431d-9d64-8143328b10d0",
-                  name: "data.ts",
-                  type: "file",
-                  patern: true,
-                  description: "",
-                },
-              ],
+              description:
+                "Временные синтетические данные, которые в будущем будут приходить с API.\n Данные можно сохранить в формате `json` или `ts(x)`.",
             },
             {
               id: "c3b4b93e-e1a0-4546-9ddf-28a2ebb7e4d9",
               name: "types",
               type: "folder",
-              description: "",
-              children: [
-                {
-                  id: "9495f859-6abe-4dbd-a498-7f5d46fcd58a",
-                  name: "types.ts",
-                  type: "file",
-                  description: "",
-                },
-              ],
+              description: "Интерфейсы и типы проекта, не связанные с API.",
             },
             {
               id: "06ee1ec6-bdf2-4321-9a2f-b40cd7bfe821",
               name: "utils",
               type: "folder",
-              description: "",
-              children: [
-                {
-                  id: "793cca24-d98d-4ebd-b267-4bfdce29e7a2",
-                  name: "formatter.ts",
-                  type: "file",
-                  description: "",
-                },
-                {
-                  id: "b9421398-3d0a-4caa-9b26-665d3b558ed9",
-                  name: "constants.ts",
-                  type: "file",
-                  description: "",
-                },
-              ],
+              description:
+                "Утилиты, помощники, константы:\n – функции построения графиков, диаграмм и т.д.;\n – функции обработки данных: форматирование, сортировка, поиск и т.д.;\n – ссылки на внешние источники: сайт разработчика, репозиторий проекта, социальные сети, ссылки на `App Store` и `Google Play` и т.д.",
             },
           ],
         },
@@ -840,26 +777,30 @@ export const projectStructure: IStructureItem = {
           id: "ddd8e0d5-552e-4800-87d5-33211dcc1c85",
           name: "API",
           type: "folder",
-          description: "",
+          description: "Функции и интерфейсы/типы по работе с API.",
           children: [
             {
               id: "ff117698-39a2-4e93-8490-575e5fe52351",
               name: "route",
               type: "folder",
-              description: "",
+              description:
+                "Функции и интерфейсы/типы по работе с соответствующим роутом API.",
+              patern: true,
               children: [
                 {
                   id: "22f329ed-3172-45cb-b45a-a526beeab562",
                   name: "routeAPI.ts",
                   type: "file",
-                  description: "",
+                  description:
+                    "Функции по работе с соответствующим роутом API.",
+                  necessary: true,
                 },
                 {
                   id: "40d6c2ef-1219-49d8-893f-a9aa9eac5a83",
                   name: "routeInterface.ts",
                   type: "file",
-                  patern: true,
-                  description: "",
+                  description:
+                    "Интерфейсы/типы по работе с соответствующим роутом API.",
                 },
               ],
             },
@@ -867,8 +808,8 @@ export const projectStructure: IStructureItem = {
               id: "96206fe8-1457-4fa3-90e8-67d316cad17e",
               name: "baseURL.ts",
               type: "file",
-              patern: true,
-              description: "",
+              description:
+                "Основной адрес API и список его роутов верхнего уровня.",
             },
           ],
         },
@@ -876,20 +817,21 @@ export const projectStructure: IStructureItem = {
           id: "186e2fec-36da-4a8f-ab2d-1415a369843e",
           name: "hooks",
           type: "folder",
-          description: "",
+          description: "Пользовательские(`custom`) хуки приложения.",
           children: [
             {
               id: "0f6fe6b1-76fc-463a-a474-a67f93d798fa",
               name: "redux.ts",
               type: "file",
-              description: "",
+              description:
+                "Хуки по работе с глобальным хранилищем приложения:\n– `useAppSelector` – получение состояния из хранилища;\n– `useAppDispatch` –  доступ к диспетчеру хранилища для изменения его состояния.",
             },
             {
               id: "ef1a3615-ac98-462e-b501-59fef987eceb",
-              name: "useSmthHook.ts",
+              name: "useSmth.ts",
               type: "file",
               patern: true,
-              description: "",
+              description: "Пользовательский(`custom`) хук.",
             },
           ],
         },
@@ -897,19 +839,21 @@ export const projectStructure: IStructureItem = {
           id: "df00ffd0-b755-4c2c-856f-6a0a0fbba198",
           name: "router",
           type: "folder",
-          description: "",
+          description: "Код, связанный с навигацией приложения.",
           children: [
             {
               id: "3793c5b3-5a5a-4bf0-9554-0767d3b0a81b",
               name: "AppRouter.tsx",
               type: "file",
-              description: "",
+              description: "Компонент навигации приложения.",
+              necessary: true,
             },
             {
               id: "64675241-15bf-4708-b602-437a5108a350",
-              name: "router.tsx",
+              name: "router.ts",
               type: "file",
-              description: "",
+              description:
+                "Основные роуты приложения и функции навигации к ним.",
             },
           ],
         },
@@ -917,21 +861,24 @@ export const projectStructure: IStructureItem = {
           id: "816e7974-8909-45fa-9782-a2465f5e4455",
           name: "redux",
           type: "folder",
-          description: "",
+          description: "Код, связанный с глобальным хранилищем приложения.",
+          necessary: true,
           children: [
             {
               id: "5a9ea981-8394-4114-bd5c-59fdc0f59f19",
               name: "reducer",
               type: "folder",
-              description: "",
+              description:
+                "Код соответствующего редюсера хранилища приложения.",
               patern: true,
               children: [
                 {
                   id: "1996e9b8-ea89-45b2-bc90-6c4d899052c6",
                   name: "reducerSlice.ts",
                   type: "file",
-                  description: "",
-                  patern: true,
+                  description:
+                    "Создание и настройка соответствующего редюсера хранилища приложения:\n – определение начального значения;\n – функции обновления состояния и т.д.",
+                  necessary: true,
                 },
               ],
             },
@@ -941,6 +888,7 @@ export const projectStructure: IStructureItem = {
               type: "file",
               description:
                 "Настройки глобального хранилища приложения: \n - подключение редюсеров; \n - подключение localStorage или sessionStorage для хранения данных; \n - определение списка редюсеров, данные которых сохраняются в localStorage или sessionStorage; \n - и т.д.",
+              necessary: true,
             },
           ],
         },
