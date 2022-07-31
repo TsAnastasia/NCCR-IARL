@@ -1,15 +1,17 @@
 import React, { FC, useCallback, useContext, useState } from "react";
 import { StructurePageContext } from "../../../../assets/contexts/StructurePageContext";
-import { IStructureItem } from "../../../../assets/types/structure";
+import structureItems from "../../../../assets/data/structureItems.json";
+import { IStructureScheme } from "../../../../assets/types/structure";
 import { cl } from "../../../../assets/utils/classnames";
-import { sortStructureItems } from "../../../../assets/utils/sortStructureItems";
+
 import StructureShemeItemIcon from "./icon/StructureShemeItemIcon";
 import scss from "./structureSchemeItem.module.scss";
 
 const StructureSchemeItem: FC<{
-  item: IStructureItem;
+  scheme: IStructureScheme;
   level?: number;
-}> = ({ item, level = 0 }) => {
+}> = ({ scheme, level = 0 }) => {
+  const item = structureItems[scheme.id];
   const [opened, setOpened] = useState<boolean>(!!item.opened);
   const { selectedItem, selectItem } = useContext(StructurePageContext);
 
@@ -22,7 +24,7 @@ const StructureSchemeItem: FC<{
   );
 
   const selectHadler = useCallback(() => {
-    selectItem(item);
+    selectItem(structureItems[item.id]);
   }, [item, selectItem]);
 
   return (
@@ -42,15 +44,16 @@ const StructureSchemeItem: FC<{
           item={item}
           opened={opened}
           onToggle={toggleOpenHandler}
+          hasChildren={!!scheme.children}
         />
         <p className={scss.name}>{item.name}</p>
       </div>
-      {opened && item.children && (
+      {opened && scheme.children && (
         <div className={scss.children}>
-          {sortStructureItems(item.children).map((node) => (
+          {scheme.children.map((node) => (
             <StructureSchemeItem
-              key={node.name}
-              item={{ ...node, patern: item.patern || node.patern }}
+              key={node.id}
+              scheme={node}
               level={level + 1}
             />
           ))}
