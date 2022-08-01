@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { StructurePageContext } from "../../../assets/contexts/StructurePageContext";
 import { structureItemTypes } from "../../../assets/types/structure";
 import { cl } from "../../../assets/utils/classnames";
+import PageTitle from "../../../components/pageTitle/PageTitle";
 import scss from "./structureInfo.module.scss";
 
 const StructureInfo = () => {
@@ -13,7 +14,9 @@ const StructureInfo = () => {
     <section className={scss.root}>
       {selectedItem ? (
         <>
-          <h2 className={scss.title}>{selectedItem.name}</h2>
+          <PageTitle className={scss.title} type="h2">
+            {selectedItem.name}
+          </PageTitle>
           <p className={scss.text}>
             <span className={scss.subtitle}>Тип</span>
             {structureItemTypes[selectedItem.type]}

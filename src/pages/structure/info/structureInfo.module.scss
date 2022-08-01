@@ -29,20 +29,13 @@
     border-radius: 99rem;
     background-color: #c4c4c4;
   }
-}
 
-.title {
-  margin: 0 30px 10px -10px;
+  .title {
+    margin: 0 30px 10px -10px;
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-
-  color: #000000;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 .subtitle {

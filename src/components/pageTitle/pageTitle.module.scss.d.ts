@@ -1,5 +1,7 @@
 declare namespace PageTitleModuleScssNamespace {
   export interface IPageTitleModuleScss {
+    h1: string;
+    h2: string;
     title: string;
   }
 }

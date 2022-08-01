@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PageTitle from "../../components/pageTitle/PageTitle";
 import { RouteNames } from "../../router/router";
 
 const pages: {
@@ -26,7 +27,7 @@ const pages: {
 const HomePage = () => {
   return (
     <main>
-      <h1>Home page</h1>
+      <PageTitle>Frontend rules</PageTitle>
       <section>
         <h2>about project</h2>
         <p>description</p>
