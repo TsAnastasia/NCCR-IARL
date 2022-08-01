@@ -1,0 +1,1 @@
+{"version":3,"file":"607.chunk.js","mappings":"+IAQA,QARgB,WACd,OACE,2BACE,sCAGL,C","sources":["webpack://template/./src/pages/git/GitPage.tsx"],"sourcesContent":["const GitPage = () => {\n  return (\n    <main>\n      <h1>git page</h1>\n    </main>\n  );\n};\n\nexport default GitPage;\n"],"names":[],"sourceRoot":""}

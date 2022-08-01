@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[29],{8029:(e,t,n)=>{n.r(t),n.d(t,{default:()=>c});var a=n(5893);const c=function(){return(0,a.jsx)("main",{children:(0,a.jsx)("h1",{children:"code page"})})}}}]);
+//# sourceMappingURL=29.chunk.js.map

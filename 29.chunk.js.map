@@ -1,0 +1,1 @@
+{"version":3,"file":"29.chunk.js","mappings":"8IAQA,QARiB,WACf,OACE,2BACE,uCAGL,C","sources":["webpack://template/./src/pages/code/CodePage.tsx"],"sourcesContent":["const CodePage = () => {\n  return (\n    <main>\n      <h1>code page</h1>\n    </main>\n  );\n};\n\nexport default CodePage;\n"],"names":[],"sourceRoot":""}
