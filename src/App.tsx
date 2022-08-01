@@ -12,7 +12,7 @@ const App = () => {
   const isStructurePage = useMatch(RouteNames.STRUCTURE);
 
   return (
-    <div className={cl(scss.app, isStructurePage && scss.structure)}>
+    <div className={cl(scss.app, isStructurePage ? scss.structure : scss.home)}>
       <Header />
       {/* TODO: add loader */}
       <Suspense

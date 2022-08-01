@@ -18,6 +18,15 @@
     background: url("./assets/images/bg-structure.png") center/ 400px repeat;
   }
 
+  &.home {
+    background: url("./assets/images/bg.png") 100% calc(100% - 60px) / 400px
+      no-repeat;
+
+    main {
+      background-color: rgba($color: #fff, $alpha: 0.6);
+    }
+  }
+
   main {
     flex: 1;
   }
