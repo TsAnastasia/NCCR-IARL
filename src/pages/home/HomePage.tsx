@@ -11,6 +11,16 @@ const pages: {
     name: "project's structure",
     description: "some description",
   },
+  {
+    path: RouteNames.CODE,
+    name: "recommendations for writing code",
+    description: "some description",
+  },
+  {
+    path: RouteNames.GIT,
+    name: "work with git",
+    description: "some description",
+  },
 ];
 
 const HomePage = () => {

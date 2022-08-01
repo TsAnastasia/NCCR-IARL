@@ -6,6 +6,7 @@ import { useMatch } from "react-router-dom";
 import { RouteNames } from "./router/router";
 
 import { cl } from "./assets/utils/classnames";
+import { Suspense } from "react";
 
 const App = () => {
   const isStructurePage = useMatch(RouteNames.STRUCTURE);
@@ -13,7 +14,16 @@ const App = () => {
   return (
     <div className={cl(scss.app, isStructurePage && scss.structure)}>
       <Header />
-      <AppRouter />
+      {/* TODO: add loader */}
+      <Suspense
+        fallback={
+          <main>
+            <p>Loading...</p>
+          </main>
+        }
+      >
+        <AppRouter />
+      </Suspense>
       <Footer />
     </div>
   );

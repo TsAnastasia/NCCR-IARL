@@ -1,16 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { RouteNames } from "../../router/router";
 import Logo from "../../assets/images/logo.svg";
 import scss from "./header.module.scss";
+import { cl } from "../../assets/utils/classnames";
+
+const navLinks: { route: string; name?: string }[] = [
+  { route: RouteNames.STRUCTURE, name: "Структура" },
+  { route: RouteNames.CODE, name: "Код" },
+  { route: RouteNames.GIT, name: "Git" },
+];
 
 const Header = () => {
   return (
     <header className={scss.root}>
-      <Link to={RouteNames.HOME} className={scss.link}>
-        <img className={scss.logo} src={Logo} alt="frontend rules" />
+      <Link to={RouteNames.HOME} className={scss.logo}>
+        <img className={scss.image} src={Logo} alt="frontend rules" />
         <p className={scss.name}>Frontend rules</p>
       </Link>
-      {/* TODO: add menu */}
+
+      <nav>
+        <ul className={scss.links}>
+          {navLinks.map(({ route, name }) => (
+            <li key={route}>
+              <NavLink
+                to={route}
+                className={({ isActive }) =>
+                  cl(scss.item, isActive && scss.active)
+                }
+              >
+                {name || route}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 };
