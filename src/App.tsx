@@ -10,9 +10,15 @@ import { Suspense } from "react";
 
 const App = () => {
   const isStructurePage = useMatch(RouteNames.STRUCTURE);
+  const isCodePage = useMatch(RouteNames.CODE);
 
   return (
-    <div className={cl(scss.app, isStructurePage ? scss.structure : scss.home)}>
+    <div
+      className={cl(
+        scss.app,
+        isStructurePage ? scss.structure : isCodePage ? scss.coding : scss.home
+      )}
+    >
       <Header />
       {/* TODO: add loader */}
       <Suspense

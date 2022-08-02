@@ -18,8 +18,17 @@
     background: url("./assets/images/bg-structure.png") center/ 400px repeat;
   }
 
+  &.coding {
+    background: url("./assets/images/bg-coding.png") calc(100% - 50px)
+      calc(100% - 60px) / 400px no-repeat;
+
+    main {
+      background-color: rgba($color: #fff, $alpha: 0.8);
+    }
+  }
+
   &.home {
-    background: url("./assets/images/bg.png") 100% calc(100% - 60px) / 400px
+    background: url("./assets/images/bg.png") 100% calc(100% - 60px) / 500px
       no-repeat;
 
     main {
