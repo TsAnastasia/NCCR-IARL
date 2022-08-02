@@ -1,0 +1,31 @@
+.commands {
+  padding: 0 0 0 20px;
+
+  color: #203072;
+
+  .item {
+    margin: 10px 0;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+
+    color: #000000;
+    background-color: rgba($color: #fff, $alpha: 0.2);
+
+    .command {
+      font-weight: 400;
+      font-size: 18px;
+
+      &::after {
+        content: "–";
+        margin: 0 2px;
+
+        font-weight: 300;
+        font-size: 16px;
+      }
+    }
+  }
+}

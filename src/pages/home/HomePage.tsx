@@ -13,7 +13,7 @@ const HomePage = () => {
         <PageTitle type="h2">О проекте</PageTitle>
         <p className={scss.text}>
           Данный сайт реализован с целью фиксации правил и договоренностей,
-          применяемых при разработке frontend части в нашей лаборатории{" "}
+          применяемых при разработке frontend в лаборатории{" "}
           <ExternalLink href={LAB_LINK}>
             INDUSTRIAL AI RESEARCH LAB
           </ExternalLink>

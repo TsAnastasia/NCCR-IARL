@@ -6,8 +6,9 @@ const PageTitle: FC<{
   children: string;
   className?: string;
   type?: "h1" | "h2";
-}> = ({ children, className, type = "h1" }) => {
-  const Component = type;
+  component?: "h1" | "h2" | "h3";
+}> = ({ children, className, type = "h1", component }) => {
+  const Component = component || type;
   return (
     <Component className={cl(className, scss.title, scss[type])}>
       {children}
