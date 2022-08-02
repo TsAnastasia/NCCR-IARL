@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktemplate=self.webpackChunktemplate||[]).push([[607],{3607:(e,t,n)=>{n.r(t),n.d(t,{default:()=>s});var a=n(5893);const s=function(){return(0,a.jsx)("main",{children:(0,a.jsx)("h1",{children:"git page"})})}}}]);
-//# sourceMappingURL=607.chunk.js.map
