@@ -11,12 +11,19 @@ import { Suspense } from "react";
 const App = () => {
   const isStructurePage = useMatch(RouteNames.STRUCTURE);
   const isCodePage = useMatch(RouteNames.CODE);
+  const isGitPage = useMatch(RouteNames.GIT);
 
   return (
     <div
       className={cl(
         scss.app,
-        isStructurePage ? scss.structure : isCodePage ? scss.coding : scss.home
+        isStructurePage
+          ? scss.structure
+          : isCodePage
+          ? scss.coding
+          : isGitPage
+          ? scss.git
+          : scss.home
       )}
     >
       <Header />

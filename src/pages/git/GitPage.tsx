@@ -1,7 +1,13 @@
+import PageTitle from "../../components/pageTitle/PageTitle";
+import GitHelp from "./help/GitHelp";
+import GitRules from "./rules/GitRules";
+
 const GitPage = () => {
   return (
     <main>
-      <h1>git page</h1>
+      <PageTitle>Git</PageTitle>
+      <GitRules />
+      <GitHelp />
     </main>
   );
 };
