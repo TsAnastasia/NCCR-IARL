@@ -18,7 +18,7 @@ const StructurePage = () => {
   return (
     <StructurePageContext.Provider value={{ selectedItem, selectItem }}>
       <main className={scss.root}>
-        <PageTitle name="Структура проекта" className={scss.title} />
+        <PageTitle className={scss.title}>Структура проекта</PageTitle>
         <StructureAbout />
 
         <StructureScheme />

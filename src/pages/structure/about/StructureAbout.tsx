@@ -1,16 +1,17 @@
 import { TEMPLATE_LINK } from "../../../assets/utils/constants";
+import ExternalLink from "../../../components/externalLink/ExternalLink";
+import PageTitle from "../../../components/pageTitle/PageTitle";
 import scss from "./structureAbout.module.scss";
 
 const StructureAbout = () => {
   return (
     <section className={scss.root}>
-      <h2 className={scss.title}>Общие сведения</h2>
+      <PageTitle className={scss.title} type="h2">
+        Общие сведения
+      </PageTitle>
       <p className={scss.text}>
         Данная структура проекта формируется на основе{" "}
-        <a href={TEMPLATE_LINK} target="_blank" rel="noreferrer">
-          нашего шаблона
-        </a>
-        .
+        <ExternalLink href={TEMPLATE_LINK}>нашего шаблона</ExternalLink>.
       </p>
       <p className={scss.text}>
         Для стилизации компонентов применяется `sass`. Соотвествующие файлы

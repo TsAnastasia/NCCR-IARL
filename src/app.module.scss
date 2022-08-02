@@ -14,11 +14,36 @@
 
   box-shadow: 0 0 40px 4px #c4c4c4c4;
 
+  main {
+    flex: 1;
+  }
+
+  &.home {
+    background: url("./assets/images/bg.png") 100% calc(100% - 60px) / 500px
+      no-repeat;
+
+    main {
+      background-color: rgba($color: #fff, $alpha: 0.6);
+    }
+  }
+
   &.structure {
     background: url("./assets/images/bg-structure.png") center/ 400px repeat;
   }
 
-  main {
-    flex: 1;
+  &.coding {
+    background: url("./assets/images/bg-coding.png") calc(100% - 50px)
+      calc(100% - 60px) / 400px no-repeat;
+
+    main {
+      background-color: rgba($color: #fff, $alpha: 0.8);
+    }
+  }
+
+  &.git {
+    background: url("./assets/images/bg-git.png") center / 400px repeat;
+    main {
+      background-color: rgba($color: #fff, $alpha: 0.6);
+    }
   }
 }

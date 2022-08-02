@@ -1,0 +1,152 @@
+[
+  {
+    "group": "Создание репозитория",
+    "commands": [
+      {
+        "command": "git init [project_name]",
+        "description": "создать новый локальный репозиторий"
+      },
+      {
+        "command": "git clone [url]",
+        "description": "скачать/клонировать существующий репозиторий"
+      },
+      {
+        "command": "git clone [url] [folder]",
+        "description": "скачать/клонировать существующий репозиторий в указанную папку"
+      }
+    ]
+  },
+  {
+    "group": "Отслеживание репозитория",
+    "commands": [
+      {
+        "command": "git status",
+        "description": "список новых и измененных файлов, еще не закоммитеных."
+      },
+      {
+        "command": "git diff",
+        "description": "изменения, не подготовленные для фиксации (не добавленные в индекс)"
+      },
+      {
+        "command": "git diff --cached",
+        "description": "изменения в индексированных файлах"
+      },
+      {
+        "command": "git diff HEAD",
+        "description": "все индексированные и неиндексированные изменения файлов относительно HEAD"
+      },
+      {
+        "command": "git diff [commit1] [commit2]",
+        "description": "различия между двумя коммитами"
+      },
+      {
+        "command": "git blame [file]",
+        "description": "дата и автор изменений файла"
+      },
+      {
+        "command": "git show [commit]:[file]",
+        "description": "список изменений файла в определенном коммите"
+      },
+      { "command": "git log", "description": "полная история изменений" },
+      {
+        "command": "git log -p [file/directory]",
+        "description": "история изменений файла/папки, включая различия"
+      },
+      {
+        "command": "git log --onleline --graph",
+        "description": "история коммитов в виде графика для текущей ветки"
+      }
+    ]
+  },
+  {
+    "group": "Работа с ветками",
+    "commands": [
+      { "command": "git branch", "description": "список всех локальных папок" },
+      {
+        "command": "git branch -av",
+        "description": "список всех веток (из локального и удаленного репозиториев)"
+      },
+      {
+        "command": "git branch [new_branch]",
+        "description": "создание новой ветки"
+      },
+      {
+        "command": "git checkout [branch]",
+        "description": "переключение к указанной ветке"
+      },
+      {
+        "command": "git checkout -b[new_branch]",
+        "description": "создание новой ветки и переключение к ней"
+      },
+      {
+        "command": "git branch -d [deleted_branch]",
+        "description": "удалить указанную ветку"
+      },
+      {
+        "command": "git tag [name]",
+        "description": "создать тег для текущего коммита"
+      },
+      {
+        "command": "git merge [branch]",
+        "description": "смержить изменения из указанной ветки в текущую"
+      },
+      {
+        "command": "git rebase [branch]",
+        "description": "подтянуть изменения из указанной векти и перезаписать историю изменений из текущей поверх них"
+      }
+    ]
+  },
+  {
+    "group": "Изменения (коммиты)",
+    "commands": [
+      { "command": "git add [file]", "description": "индексировать файл" },
+      { "command": "git add .", "description": "индексировать все файлы" },
+      {
+        "command": "git commit -m \"message\"",
+        "description": "зафиксировать (записать коммит) индексированные файлы с указанным сообщением"
+      },
+      {
+        "command": "git commit -am \"message\"",
+        "description": "зафиксировать (записать коммит) все отслеживаемые файлы (в том числе не индексированные) с указанным сообщением"
+      },
+      {
+        "command": "git reset [file]",
+        "description": "откатить изменения для указанного файла"
+      },
+      {
+        "command": "git reset --hard",
+        "description": "откатить все изменения до последней фиксации"
+      }
+    ]
+  },
+  {
+    "group": "Синхронизация",
+    "commands": [
+      {
+        "command": "git fetch",
+        "description": "получить последние изменения с удаленного репозитория без слияния"
+      },
+      {
+        "command": "git pull",
+        "description": "получить последние изменения с сервера и смержить их"
+      },
+      {
+        "command": "git pull --rebase",
+        "description": "получить изменения из удаленного репозитория и наложить незапушенные коммиты поверх скачанных"
+      },
+      {
+        "command": "git push",
+        "description": "отправить локальные изменения в удаленный репозиторий"
+      }
+    ]
+  },
+  {
+    "group": "Справка",
+    "commands": [
+      {
+        "command": "git [command] --help",
+        "description": "получить справку по указанной команде"
+      }
+    ]
+  }
+]

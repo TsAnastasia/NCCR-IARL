@@ -7,18 +7,10 @@
   box-shadow: 2px 2px 5px #c4c4c4;
 
   grid-area: about;
-}
 
-.title {
-  margin: 0 0 10px;
-
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
-
-  color: #000000;
+  .title {
+    margin: 0 0 10px;
+  }
 }
 
 .text {
@@ -27,7 +19,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 120%;
 
   color: #000000;
