@@ -1,7 +1,11 @@
 .root {
   position: relative;
 
-  section {
+  section:not(:first-child) {
     padding-top: 100px;
+
+    &:not(:last-child) {
+      margin-bottom: -100px;
+    }
   }
 }
