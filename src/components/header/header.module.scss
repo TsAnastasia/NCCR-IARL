@@ -1,19 +1,27 @@
 .root {
   margin: 0 -10px;
-  padding: 20px 10px;
+  padding: 0 10px;
 
   border-bottom: 1px solid #c4c4c4;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .logo {
+  padding: 20px 0;
+
+  text-decoration: none;
+  background: #ffffff;
+
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  text-decoration: none;
 
   .image {
     width: 30px;

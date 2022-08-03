@@ -1,0 +1,71 @@
+.root {
+  margin: 0 -10px -120px;
+  padding: 30px 10px 20px;
+
+  background: #ffffff url("../../../assets/images/bg-git.png") right center/
+    contain space;
+  box-shadow: 2px 2px 2px #c4c4c4;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .title {
+    margin: 0 0 20px;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    display: inline-block;
+  }
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+
+  background-color: rgba($color: #fff, $alpha: 0.8);
+
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  .link {
+    margin: 0 10px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-decoration: none;
+    white-space: nowrap;
+
+    color: #203072;
+
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 0;
+
+      background: #203072;
+
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: #000000;
+      opacity: 0.8;
+      &::after {
+        width: 100%;
+        background: #000000;
+      }
+    }
+  }
+}

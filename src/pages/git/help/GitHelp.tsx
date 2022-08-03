@@ -1,9 +1,10 @@
 import gitCommands from "../../../assets/data/gitCommands.json";
+import { GitSections } from "../../../assets/types/git";
 import PageTitle from "../../../components/pageTitle/PageTitle";
 import scss from "./gitHelp.module.scss";
 
 const GitHelp = () => (
-  <section>
+  <section id={GitSections.HELP}>
     <PageTitle type="h1" component="h2">
       Основные комнады git
     </PageTitle>

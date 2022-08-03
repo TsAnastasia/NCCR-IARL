@@ -1,9 +1,10 @@
 import gitRules from "../../../assets/data/gitRules.json";
+import { GitSections } from "../../../assets/types/git";
 import PageTitle from "../../../components/pageTitle/PageTitle";
 import scss from "./gitRules.module.scss";
 
 const GitRules = () => (
-  <section>
+  <section id={GitSections.RULES}>
     <PageTitle type="h1" component="h2">
       Правила работы с git
     </PageTitle>
